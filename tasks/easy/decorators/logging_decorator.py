@@ -20,5 +20,7 @@ def log_decorator(func):
 
 @log_decorator
 def hello(name: str):
-    print(f"Привет, {name}")
-    hello("Юзик")
+    return print(f"Привет, {name}")
+
+
+hello("Юзик")
