@@ -18,3 +18,23 @@ File «C:/Python/Python3/python_generator.py», line 29, in
 print(next(fib))
 StopIteration
 """
+
+
+def fibonacci(num_count):
+    num = 0
+    num2 = 1
+    if num_count == 0:
+        raise ValueError('Введите значение больше 1')
+    for i in range(num_count):
+        num, num2 = num2, num + num2
+        yield num
+
+
+test = fibonacci(7)
+print(next(test))
+print(next(test))
+print(next(test))
+print(next(test))
+print(next(test))
+print(next(test))
+print(next(test))
